@@ -459,11 +459,11 @@ Analytics} }
 
 						\cvskill{R}{3+ yrs.}{0.7} \\[10pt]
 								\cvskill{Stata}{2 yrs.}{0.4} \\[10pt]
-								\cvskill{Google Cloud}{4 yrs.}{0.4} \\[10pt]
+								\cvskill{Google Cloud}{7 yrs.}{0.4} \\[10pt]
 								\cvskill{Github}{5 yr.}{0.2} \\[10pt]
-								\cvskill{Quarto}{2 yr.}{0.2} \\[10pt]
-								\cvskill{Causal inference}{3 years}{0.4} \\[10pt]
-								\cvskill{Statistical Analysis}{15 yrs.}{0.5} \\[10pt]
+								\cvskill{Quarto}{3 yr.}{0.25} \\[10pt]
+								\cvskill{Causal inference}{3 years}{0.2} \\[10pt]
+								\cvskill{Statistical Analysis}{15 yrs.}{0.6} \\[10pt]
 								\cvskill{Clinical Research}{15 years}{0.9} \\[10pt]
 						
 		\cvsection{Tools}
@@ -487,6 +487,7 @@ University of Technology}{}
 						\icontext{map-marker}{16}{Sydney, Australia}\\[6pt]
 								\icontext{phone}{16}{+61 411 032 987}\\[6pt]
 								\icontext{envelope}{16}{cscholes181@gmail.com}\\[6pt]
+								\icontext{linkedin}{16}{coreyscholes}\\[6pt]
 						
 	\end{leftcolumn}
 
