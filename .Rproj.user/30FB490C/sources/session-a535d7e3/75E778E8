@@ -3,7 +3,7 @@
     "path": "~/GitHub Repositories/modern2-cv/CoreyScholesCV2.qmd",
     "project_path": "CoreyScholesCV2.qmd",
     "type": "quarto_markdown",
-    "hash": "2938868612",
+    "hash": "2630179542",
     "contents": "",
     "dirty": false,
     "created": 1762154287779.0,
@@ -12,20 +12,21 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "81,39",
-        "scrollLine": "64",
+        "cursorPosition": "155,53",
+        "scrollLine": "136",
         "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "5916:2718"
+        "rmdVisualModeLocation": "1983:1100",
+        "docOutlineSize": "91"
     },
     "folds": "",
-    "lastKnownWriteTime": 1762406438,
+    "lastKnownWriteTime": 1762416330,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1762406438654,
+    "last_content_update": 1762416330741,
     "read_only": false,
     "read_only_alternatives": []
 }

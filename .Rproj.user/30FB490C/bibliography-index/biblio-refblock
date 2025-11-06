@@ -1,0 +1,87 @@
+---
+title: Curriculum Vitae
+format:
+  modern2-cv-pdf: default
+author: Corey Scholes
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: B83B5E
+  accent: 6A2C70
+jobtitle: Chief Science Officer, EBM Analytics
+sidebar:
+  image: portrait.jpg
+  bullets:
+    - Sydney, Australia
+    - Australian Citizen
+    - Married
+  sections: 
+    - name: Skills
+      items:
+        - text: R
+          exp: 
+            text: "3+ yrs."
+            num: 0.7
+        - text: Stata
+          exp: 
+            text: "2 yrs."
+            num: 0.4
+        - text: Google Cloud
+          exp: 
+            text: "7 yrs."
+            num: 0.4
+        - text: Github
+          exp: 
+            text: "5 yr."
+            num: 0.2
+        - text: Quarto
+          exp: 
+            text: "3 yr."
+            num: 0.25
+        - text: Causal inference
+          exp: 
+            text: "3 years"
+            num: 0.2
+        - text: Statistical Analysis
+          exp: 
+            text: "15 yrs."
+            num: 0.6
+        - text: Clinical Research
+          exp: 
+            text: "15 years"
+            num: 0.9
+    - name: Tools
+      items:
+        - Shiny
+        - Google Workspace
+        - Matlab
+        - Project management
+        - Customer Relationship Management
+    - name: Education
+      items:
+        - text: "Ph.D. Exercise Science"
+          inst: "Queensland University of Technology"
+          time: "2010"
+          details: "Thesis: The effects of muscle fatigue on knee function during landing"
+        - text: "Bachelor Applied Science (Hons)"
+          inst: "Queensland University of Technology"
+          time: "2004"
+          
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Sydney, Australia
+        - icon: phone
+          text: "+61 411 032 987"
+        - icon: envelope
+          text: cscholes181@gmail.com
+        - icon: linkedin
+          text: coreyscholes
+
+references: Scholes.bib 
+nocite: |
+  @*
+  
+template: template.tex
+execute: 
+  echo: false
+---

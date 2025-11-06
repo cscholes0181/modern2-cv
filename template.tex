@@ -233,7 +233,7 @@
 \newcommand{\cvtextsmall}[1] {
 	\begin{tabular*}{0.8\mpwidth}{p{0.8\mpwidth}}
 		\parbox{0.8\mpwidth}{#1}
-	\end{tabular*}
+	\end{tabular*}\\
 }
 %----------------------------------------------------------------------------------------
 %	CV SECTION
@@ -328,12 +328,12 @@
 	\vspace{14pt}
 }
 
-\newcommand{\cvproj}[3] {
+\newcommand{\cvoutput}[3] {
 	\parbox{\mpwidth}{
 		\begin{tabular*}{1\mpwidth}{p{0.66\mpwidth}  r}
-	 		\textcolor{black}{\textbf{#1}} & \\
+	 		\textcolor{black}{\textbf{#1}} \\
 			\textcolor{maincol}{#2} & \\
-		\end{tabular*}\\[4pt]
+		\end{tabular*}\\[8pt]
 	
 		\ifthenelse{\isempty{#3}}{}{
 			\cvtext{#3}\\
@@ -442,52 +442,53 @@
 		%----------------------------------------------------------------------------------------
                 \includegraphics[width=\linewidth]{portrait.jpg}
         		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
-				\LARGE{\textbf{\textcolor{maincol}{Corey Scholes}}} \\[2pt]
-				\normalsize{ \textcolor{maincol} {Chief Science Officer, EBM
-Analytics} }
+				\LARGE{\textbf{\textcolor{maincol}{David Schoch}}} \\[2pt]
+				\normalsize{ \textcolor{maincol} {Team Lead ``Transparent Social
+Analytics''} }
 			\end{minipage}}
 
 		%---------------------------------------------------------------------------------------
 		%	META SKILLS
 		%----------------------------------------------------------------------------------------
-				\icontext{caret-right}{12}{Sydney, Australia}\\[6pt]
-				\icontext{caret-right}{12}{Australian Citizen}\\[6pt]
-				\icontext{caret-right}{12}{Married}\\[6pt]
+				\icontext{caret-right}{12}{Konstanz, Germany}\\[6pt]
+				\icontext{caret-right}{12}{german}\\[6pt]
+				\icontext{caret-right}{12}{married}\\[6pt]
 		
 		
 		\cvsection{Skills}
 
-						\cvskill{R}{3+ yrs.}{0.7} \\[10pt]
-								\cvskill{Stata}{2 yrs.}{0.4} \\[10pt]
-								\cvskill{Google Cloud}{7 yrs.}{0.4} \\[10pt]
-								\cvskill{Github}{5 yr.}{0.2} \\[10pt]
-								\cvskill{Quarto}{3 yr.}{0.25} \\[10pt]
-								\cvskill{Causal inference}{3 years}{0.2} \\[10pt]
-								\cvskill{Statistical Analysis}{15 yrs.}{0.6} \\[10pt]
-								\cvskill{Clinical Research}{15 years}{0.9} \\[10pt]
+						\cvskill{R}{10+ yrs.}{1} \\[10pt]
+								\cvskill{Python}{2 yrs.}{0.2} \\[10pt]
+								\cvskill{JavaScript}{4 yrs.}{0.4} \\[10pt]
+								\cvskill{Lua}{1 yr.}{0.1} \\[10pt]
+								\cvskill{Rmarkdown}{6 yrs.}{0.6} \\[10pt]
+								\cvskill{Quarto}{1 yr.}{0.1} \\[10pt]
+								\cvskill{Data Analysis}{9 years}{0.9} \\[10pt]
+								\cvskill{Web Scraping}{8 yrs.}{0.8} \\[10pt]
+								\cvskill{Web Development}{8 years}{0.8} \\[10pt]
 						
 		\cvsection{Tools}
 
-						\icontext{caret-right}{12}{Shiny}\\[6pt]
-								\icontext{caret-right}{12}{Google Workspace}\\[6pt]
-								\icontext{caret-right}{12}{Matlab}\\[6pt]
-								\icontext{caret-right}{12}{Project management}\\[6pt]
-								\icontext{caret-right}{12}{Customer Relationship Management}\\[6pt]
+						\icontext{caret-right}{12}{Git}\\[6pt]
+								\icontext{caret-right}{12}{RStudio}\\[6pt]
+								\icontext{caret-right}{12}{VS Code}\\[6pt]
+								\icontext{caret-right}{12}{Terminal}\\[6pt]
 						
 		\cvsection{Education}
 
-						\cvmetaevent{2010}{Ph.D.~Exercise Science}{Queensland University of
-Technology}{Thesis: The effects of muscle fatigue on knee function
-during landing}
-								\cvmetaevent{2004}{Bachelor Applied Science (Hons)}{Queensland
-University of Technology}{}
+						\cvmetaevent{09/2012 - 11/2015}{Ph.D.~Computer Science}{University of
+Konstanz}{Thesis: Positional Approach for Network Centrality}
+								\cvmetaevent{10/2006 - 07/2012}{Businessmathematics (Dipl.)}{Karlsruhe
+Institute of Technology}{Thesis: Modularity Maximization}
 						
 		\cvsection{Contact}
 
-						\icontext{map-marker}{16}{Sydney, Australia}\\[6pt]
-								\icontext{phone}{16}{+61 411 032 987}\\[6pt]
-								\icontext{envelope}{16}{cscholes181@gmail.com}\\[6pt]
-								\icontext{linkedin}{16}{coreyscholes}\\[6pt]
+						\icontext{map-marker}{16}{Konstanz, Germany}\\[6pt]
+								\icontext{phone}{16}{+XX XXXX XXXX}\\[6pt]
+								\icontext{envelope}{16}{david@schochastics.net}\\[6pt]
+								\iconhref{home}{16}{mr.schochastics.net}{https://mr.schochastics.net}\\[6pt]
+								\iconhref{github}{16}{schochastics}{https://github.com/schochastics}\\[6pt]
+								\iconhref{twitter}{16}{schochastics}{https://twitter.com/schochastics}\\[6pt]
 						
 	\end{leftcolumn}
 
@@ -495,46 +496,41 @@ University of Technology}{}
 		\cvsection{Summary} \vspace{4pt}
 
 \cvtext{%
-\textbf{Scientist and Analysis Executive} with 15 years of experience
-bridging the gap between clinical research and evidence-generation
-within routine practice across diverse settings. A collaborative leader
-with the ability to communicate technically across multidisciplinary
-teams and influence behaviour change to embed data-driven practices into
-long-term strategies. An experienced consultant assisting executive
-teams to bring about change within their own organisations through
-strategic planning and implementation of complex systems.}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet.}
 
 \cvsection{Experience} \vspace{4pt}
 
-\cvevent{2020 - Present}{Chief Science Officer}{EBM Analytics}{I was the architect of 8+ specialist clinical quality registries for sports medicine, adult joint reconstruction and ortho-oncology, managing multiyear engagements (5 years) valued at 60 - 250k each. I led teams to implement data infrastructure to integrate electronic screening, randomisation and longitudinal patient-reported outcome collection within clinical workflows. I was responsible for ensuring systems complied with recognised principles for clinical quality registries, as well as human research ethics requirements}
+\cvevent{03/2022 - Present}{Team Lead for Transparent Social Analytics}{Department of Computational Social Science \newline GESIS - Leibniz Institute for the Social Sciences}{I am coordinating a project to build an Open Science platform with reusable code and tutorials to analyze digital behaviour data. I am also doing research on Open Science practices and I implement tools to enhance reproducibility and make methods accessible in R}
 
-\cvevent{2016 - Present}{Co-Founder and Director}{EBM Analytics}{I built a profitable healthcare analytics firm with two co-founders from the ground up, scaling to 750k annual revenue with 10 FTE staff. I established a national and international client base across public and private health sectors, government and industry.}
+\cvevent{09/2018 - 02/2022}{Presidential Fellow}{Sociology Department \newline University of Manchester}{I did research on Disinformation on Social Media which involved the analysis of large scale and unstructured data sets with R and Bash}
 
-\cvevent{2016 - Present}{Principal Consultant}{EBM Analytics}{I was the point person for business development with targeted account acquisition and relationship management within complex customer ecosystems and long purchasing cycles. I secured numerous consulting engagements resulting in peer-reviewed publications and internal organisation reports for customers. Through this work I supervised multidisciplinary teams of engineers, data analysts, clinicians, and research coordinators across concurrent projects}
+\cvevent{11/2017 - 08/2018}{Post Doctoral Researcher}{Chair of Social Networks \newline ETH Zurich}{I developed new methods to analyze social networks and I gathered and analyzed large datsets from Social Media APIs}
 
-\cvevent{2009- 2016}{Director of Research}{Sydney Orthopaedic Research Institute}{I planned, led and managed the research and operational activities of a non-for-profit institute attached to the practices of a group of orthopaedic surgeons. I provided operational and day-to-day management for the Institute, developed research strategy and provided the subject matter expertise for clinical research. I also acted as at the primary point of contact for staffing, contracting and supplier engagements}
+\cvevent{10/2015 - 10/2017}{Post Doctoral Researcher}{Department of Computer \& Information Science \newline University of Konstanz}{I developed new methods to analyze social networks and scraped, harmonized, and analyzed a large corpus of football data}
 
-\cvevent{2006-2008}{Teaching Assistant}{Queensland University of Technology}{Planned, prepared and delivered lectures and tutorials on fundamental and advanced biomechanics and functional anatomy. I conducted curriculum planning and preparation for fundamental and advanced classes. }
+\cvevent{11/2012 - 09/2015}{Ph.D. Candidate}{Department of Computer \& Information Science \newline University of Konstanz}{I developed new methods to analyze social networks and implemented these methods in R packages using R and C++}
 
-\cvevent{2008 - 2015}{General Service Officer}{Australian Army Reserve}{In this role I was responsible for the training, administration and leadership of up to 50 personnel routinely and assisted with operations supporting training activities for 600+ personnel for scheduled exercises.}
-
-\cvsection{Scientific Output} \vspace{4pt}
+\cvsection{Projects} \vspace{4pt}
 
 \cvtext{%
-A summary of my research output is available at Google Scholar and
-Orcid.org. My summary profile from Publons (Web of Science) also
-illustrates my contributions to peer-review with respected journals
-within my field. Selected citations to illustrate my experience in key
-science domains are summarised below, including preprint articles that
-have yet to be submitted for peer review.}
+See my \href{https://github.com/schochastics}{github profile} for a
+comprehensive list of open source projects.}
 
-\cvoutput{Meta-Science}{Systematic Review; Meta-Analysis; Meta-Regression}{Corey Scholes et al. 2015; Harrison-Brown et al. 2019; Scholes, Ektas, et al. 2023}
+\cvproj{R packages}{Creator and Maintainer}{edgebundle, graphlayouts, levelnet, netrankr, netUtils, networkdata, PSAWR, roughnet, roughsf, rtoot, Rtumblr, signnet, snahelper, webbotparseR, webtrackR}
 
-\cvoutput{Open Science}{Trial Registration; Protocol Development}{Ektas et al 2019; Fatima et al 2020}
+\cvproj{R packages}{Contributor}{backbone, ggraph, multigraphr, netropy, rang, rgraph6}
 
-\cvoutput{Computer-Assisted Surgery}{Shoulder; Hip; Knee}{Oussedik et al. 2012; Nashikkar, Scholes, and Haber 2019; Lustig et al. 2013; Scholes,Schwagli, and Ireland 2023}
+\cvproj{Quarto extensions}{Creator and Maintainer}{Academicons (shortcodes), Blackboard (revealjs theme), sketchy (html theme), share buttons (filter), nutshell (filter), quartocities (website template), quartocv (cv templates)}
 
-\cvoutput{Clinical Quality Registry}{Implementation and validation in practice}{Jenio et al 2019; Lee et al 2020; Scholes et al 2023}
+\cvproj{soccerverse.com (football analytics website)}{Creator and Maintainer}{Manual and automated gathering of football results around the world, Harmonizing data (e.g. club names and managers), Implementation of ranking algorithms, Predicting of league tables and matchforecasting, Uses R, JavaScript, HTML, and CSS, around 1000 visitors/month}
 			\end{rightcolumn}
 \end{paracol}
 

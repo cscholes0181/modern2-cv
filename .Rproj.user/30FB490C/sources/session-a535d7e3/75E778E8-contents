@@ -76,10 +76,6 @@ sidebar:
           text: cscholes181@gmail.com
         - icon: linkedin
           text: coreyscholes
-
-references: Scholes.bib 
-nocite: |
-  @ektas2020protocol, @fatima2022effect
 execute: 
   echo: false
 ---
@@ -135,26 +131,19 @@ tibble::tribble(
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
-
-
-
-
-
 # Scientific Output
 
-A summary of my research output is available at Google Scholar and Orcid.org. My summary profile from Publons (Web of Science) also illustrates my contributions to peer-review with respected journals within my field. Selected citations to illustrate my experience in key science domains are summarised below, including preprint articles that have yet to be submitted for peer review.
-
-
+80+ peer-reviewed publications spanning meta-science, surgical and allied health outcomes in musculoskeletal medicine, clinical quality registries, predictive modeling, clinical trials, population health, and health services research. A summary of my research output is available at [**orcid.org**](https://orcid.org/0000-0001-6592-0738). My summary profile from [**Publons**](https://www.webofscience.com/wos/author/record/H-5233-2019) also illustrates my contributions to peer-review with respected journals a number of fields. Selected citations to illustrate my experience in key science domains are summarised below, including preprint articles that have yet to be submitted for peer review.
 
 ```{r}
 #| label: output
 #| output: asis
 tibble::tribble(
     ~domain, ~summary, ~examplecite,
-    "Meta-Science", "Systematic Review; Meta-Analysis; Meta-Regression", c("Corey Scholes et al. 2015", "Harrison-Brown et al. 2019", "Scholes, Ektas, et al. 2023"),
+    "Meta-Science", "Systematic Review; Meta-Analysis; Meta-Regression", c("Corey Scholes et al. 2015", "Harrison-Brown et al. 2019", "Scholes et al. 2023"),
     "Open Science", "Trial Registration; Protocol Development", c("Ektas et al 2019", "Fatima et al 2020"),
     "Computer-Assisted Surgery", "Shoulder; Hip; Knee",
-    c("Oussedik et al. 2012", "Nashikkar, Scholes, and Haber 2019", "Lustig et al. 2013", "Scholes,Schwagli, and Ireland 2023"),
+    c("Oussedik et al. 2012", "Nashikkar, Scholes, and Haber 2019", "Lustig et al. 2013", "Scholes, Schwagli, and Ireland 2023"),
     "Clinical Quality Registry", "Implementation and validation in practice",
     c("Jenio et al 2019", "Lee et al 2020", "Scholes et al 2023")
 ) |>
@@ -162,7 +151,8 @@ tibble::tribble(
 
 ```
 
+# Volunteering
 
-
+Puppy raiser 2025-2026 for [**Guide Dogs Australia**](https://guidedogs.com.au/get-involved/become-a-volunteer/raise-a-puppy).
 
 

@@ -1,0 +1,5 @@
+#| label: nocite-refs
+#| output: asis
+#| echo: false
+all_cites <- c("@ektas2020protocol", "@fatima2022effect", "@scholes2015", "@harrisonbrown2019", "@scholes2023")
+cat(paste0("\\nocite{", gsub("@", "", all_cites), "}"), sep = "\n")

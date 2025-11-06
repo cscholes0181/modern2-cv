@@ -370,13 +370,13 @@ $endif$
 
 \newcommand{\cvoutput}[3] {
 	\parbox{\mpwidth}{
-		\begin{tabular*}{1\mpwidth}{p{0.66\mpwidth}  r} \\
+		\begin{tabular*}{1\mpwidth}{p{0.66\mpwidth}  r}
 	 		\textcolor{black}{\textbf{#1}} & \\
-			\textcolor{maincol}{#2}
-		\end{tabular*}
+			\textcolor{maincol}{#2} & \\
+		\end{tabular*}\\[4pt]
 	
 		\ifthenelse{\isempty{#3}}{}{
-			\cvtext{#3}
+			\cvtext{#3}\\
 		}
 	}
 	\vspace{14pt}
