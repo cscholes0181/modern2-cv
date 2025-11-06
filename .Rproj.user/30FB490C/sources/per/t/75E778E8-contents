@@ -76,7 +76,10 @@ sidebar:
           text: cscholes181@gmail.com
         - icon: linkedin
           text: coreyscholes
-  
+
+references: Scholes.bib 
+nocite: |
+  @ektas2020protocol, @fatima2022effect
 execute: 
   echo: false
 ---
@@ -97,12 +100,12 @@ cvevents <- function(tbl, when, what, where, descr) {
     cat(res, sep = "\n\n\n")
 }
 
-cvproj <- function(tbl,what,role,items){
-    command_start <- "\\cvproj"
+cvoutput <- function(tbl,domain, summary, examplecite){   #what,role,items
+    command_start <- "\\cvoutput"
     res <- paste0(
-        command_start, "{", tbl[[what]], "}",
-        "{", tbl[[role]], "}",
-        "{", sapply(tbl[[items]], function(x)paste0(x,collapse = ", ")), "}"
+        command_start, "{", tbl[[domain]], "}",
+        "{", tbl[[summary]], "}",
+        "{", sapply(tbl[[examplecite]], function(x)paste0(x,collapse = "; ")), "}"
     )
 
     cat(res, sep = "\n\n\n")
@@ -125,55 +128,41 @@ tibble::tribble(
     "Co-Founder and Director", "EBM Analytics", "2016 - Present", "I built a profitable healthcare analytics firm with two co-founders from the ground up, scaling to 750k annual revenue with 10 FTE staff. I established a national and international client base across public and private health sectors, government and industry.",
     "Principal Consultant", "EBM Analytics", "2016 - Present", "I was the point person for business development with targeted account acquisition and relationship management within complex customer ecosystems and long purchasing cycles. I secured numerous consulting engagements resulting in peer-reviewed publications and internal organisation reports for customers. Through this work I supervised multidisciplinary teams of engineers, data analysts, clinicians, and research coordinators across concurrent projects",
     "Director of Research", "Sydney Orthopaedic Research Institute", "2009- 2016", "I planned, led and managed the research and operational activities of a non-for-profit institute attached to the practices of a group of orthopaedic surgeons. I provided operational and day-to-day management for the Institute, developed research strategy and provided the subject matter expertise for clinical research. I also acted as at the primary point of contact for staffing, contracting and supplier engagements",
-    "General Service Officer", "Australian Army Reserve", "2008 - 2015", "In this role I was responsible for the training, administration and leadership of up to 50 personnel routinely and assisted with operations supporting training activities for 600+ personnel for scheduled exercises.",
-    "Teaching Assistant", "Queensland University of Technology", "2006-2008", "Planned, prepared and delivered lectures and tutorials on fundamental and advanced biomechanics and functional anatomy. I conducted curriculum planning and preparation for fundamental and advanced classes. "
+    "Teaching Assistant", "Queensland University of Technology", "2006-2008", "Planned, prepared and delivered lectures and tutorials on fundamental and advanced biomechanics and functional anatomy. I conducted curriculum planning and preparation for fundamental and advanced classes. ",
+    "General Service Officer", "Australian Army Reserve", "2008 - 2015", "In this role I was responsible for the training, administration and leadership of up to 50 personnel routinely and assisted with operations supporting training activities for 600+ personnel for scheduled exercises."
+
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
 
 
-::: {layout-ncol=2}
 
 
-**First column**
 
-**Second column** 
+# Scientific Output
 
-I would like to have text here
-
-and here
-
-Sentence becomes longer, it should automatically stay in their column
-
-More text
-
-:::
+A summary of my research output is available at Google Scholar and Orcid.org. My summary profile from Publons (Web of Science) also illustrates my contributions to peer-review with respected journals within my field. Selected citations to illustrate my experience in key science domains are summarised below, including preprint articles that have yet to be submitted for peer review.
 
 
-# Projects
-
-See my [github profile](https://github.com/schochastics) for a comprehensive list of open source projects.
 
 ```{r}
-#| label: proj
+#| label: output
 #| output: asis
 tibble::tribble(
-    ~what, ~role, ~items,
-    "R packages", "Creator and Maintainer", c("edgebundle", "graphlayouts", "levelnet", "netrankr", "netUtils", "networkdata", "PSAWR", "roughnet", "roughsf", "rtoot", "Rtumblr", "signnet", "snahelper", "webbotparseR", "webtrackR"),
-    "R packages", "Contributor", c("backbone", "ggraph", "multigraphr", "netropy", "rang", "rgraph6"),
-    "Quarto extensions", "Creator and Maintainer",
-    c("Academicons (shortcodes)", "Blackboard (revealjs theme)", "sketchy (html theme)", "share buttons (filter)", "nutshell (filter)", "quartocities (website template)", "quartocv (cv templates)"),
-    "soccerverse.com (football analytics website)", "Creator and Maintainer",
-    c(
-        "Manual and automated gathering of football results around the world",
-        "Harmonizing data (e.g. club names and managers)",
-        "Implementation of ranking algorithms",
-        "Predicting of league tables and matchforecasting",
-        "Uses R, JavaScript, HTML, and CSS",
-        "around 1000 visitors/month"
-    )
+    ~domain, ~summary, ~examplecite,
+    "Meta-Science", "Systematic Review; Meta-Analysis; Meta-Regression", c("Corey Scholes et al. 2015", "Harrison-Brown et al. 2019", "Scholes, Ektas, et al. 2023"),
+    "Open Science", "Trial Registration; Protocol Development", c("Ektas et al 2019", "Fatima et al 2020"),
+    "Computer-Assisted Surgery", "Shoulder; Hip; Knee",
+    c("Oussedik et al. 2012", "Nashikkar, Scholes, and Haber 2019", "Lustig et al. 2013", "Scholes,Schwagli, and Ireland 2023"),
+    "Clinical Quality Registry", "Implementation and validation in practice",
+    c("Jenio et al 2019", "Lee et al 2020", "Scholes et al 2023")
 ) |>
-    cvproj(what = "what", role = "role", items = "items")
+    cvoutput(domain = "domain", summary = "summary", examplecite = "examplecite")
 
 ```
+
+
+
+
+
