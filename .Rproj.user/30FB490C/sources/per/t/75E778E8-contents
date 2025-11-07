@@ -1,0 +1,158 @@
+---
+title: Curriculum Vitae
+format:
+  modern2-cv-pdf: default
+author: Corey Scholes
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: B83B5E
+  accent: 6A2C70
+jobtitle: Chief Science Officer, EBM Analytics
+sidebar:
+  image: portrait.jpg
+  bullets:
+    - Sydney, Australia
+    - Australian Citizen
+    - Married
+  sections: 
+    - name: Skills
+      items:
+        - text: R
+          exp: 
+            text: "3+ yrs."
+            num: 0.7
+        - text: Stata
+          exp: 
+            text: "2 yrs."
+            num: 0.4
+        - text: Google Cloud
+          exp: 
+            text: "7 yrs."
+            num: 0.4
+        - text: Github
+          exp: 
+            text: "5 yr."
+            num: 0.2
+        - text: Quarto
+          exp: 
+            text: "3 yr."
+            num: 0.25
+        - text: Causal inference
+          exp: 
+            text: "3 years"
+            num: 0.2
+        - text: Statistical Analysis
+          exp: 
+            text: "15 yrs."
+            num: 0.6
+        - text: Clinical Research
+          exp: 
+            text: "15 years"
+            num: 0.9
+    - name: Tools
+      items:
+        - Shiny
+        - Google Workspace
+        - Matlab
+        - Project management
+        - Customer Relationship Management
+    - name: Education
+      items:
+        - text: "Ph.D. Exercise Science"
+          inst: "Queensland University of Technology"
+          time: "2010"
+          details: "Thesis: The effects of muscle fatigue on knee function during landing"
+        - text: "Bachelor Applied Science (Hons)"
+          inst: "Queensland University of Technology"
+          time: "2004"
+          
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Sydney, Australia
+        - icon: phone
+          text: "+61 411 032 987"
+        - icon: envelope
+          text: cscholes181@gmail.com
+        - icon: linkedin
+          text: coreyscholes
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvevent"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvoutput <- function(tbl,domain, summary, examplecite){   #what,role,items
+    command_start <- "\\cvoutput"
+    res <- paste0(
+        command_start, "{", tbl[[domain]], "}",
+        "{", tbl[[summary]], "}",
+        "{", sapply(tbl[[examplecite]], function(x)paste0(x,collapse = "; ")), "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}
+```
+
+# Summary
+
+**Scientist and Analysis Executive** with 15 years of experience bridging the gap between clinical research and evidence-generation within routine practice across diverse settings. A collaborative leader with the ability to communicate technically across multidisciplinary teams and influence behaviour change to embed data-driven practices into long-term strategies. An experienced consultant assisting executive teams to bring about change within their own organisations through strategic planning and implementation of complex systems.
+
+# Experience
+
+```{r}
+#| label: experience
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    "Chief Science Officer", "EBM Analytics", "2020 - Present",
+    "I was the architect of 8+ specialist clinical quality registries for sports medicine, adult joint reconstruction and ortho-oncology, managing multiyear engagements (5 years) valued at 60 - 250k each. I led teams to implement data infrastructure to integrate electronic screening, randomisation and longitudinal patient-reported outcome collection within clinical workflows. I was responsible for ensuring systems complied with recognised principles for clinical quality registries, as well as human research ethics requirements",
+    "Co-Founder and Director", "EBM Analytics", "2016 - Present", "I built a profitable healthcare analytics firm with two co-founders from the ground up, scaling to 750k annual revenue with 10 FTE staff. I established a national and international client base across public and private health sectors, government and industry.",
+    "Principal Consultant", "EBM Analytics", "2016 - Present", "I was the point person for business development with targeted account acquisition and relationship management within complex customer ecosystems and long purchasing cycles. I secured numerous consulting engagements resulting in peer-reviewed publications and internal organisation reports for customers. Through this work I supervised multidisciplinary teams of engineers, data analysts, clinicians, and research coordinators across concurrent projects",
+    "Director of Research", "Sydney Orthopaedic Research Institute", "2009- 2016", "I planned, led and managed the research and operational activities of a non-for-profit institute attached to the practices of a group of orthopaedic surgeons. I provided operational and day-to-day management for the Institute, developed research strategy and provided the subject matter expertise for clinical research. I also acted as at the primary point of contact for staffing, contracting and supplier engagements",
+    "Teaching Assistant", "Queensland University of Technology", "2006-2008", "Planned, prepared and delivered lectures and tutorials on fundamental and advanced biomechanics and functional anatomy. I conducted curriculum planning and preparation for fundamental and advanced classes. ",
+    "General Service Officer", "Australian Army Reserve", "2008 - 2015", "In this role I was responsible for the training, administration and leadership of up to 50 personnel routinely and assisted with operations supporting training activities for 600+ personnel for scheduled exercises."
+
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", descr = "details")
+```
+
+# Scientific Output
+
+80+ peer-reviewed publications spanning meta-science, surgical and allied health outcomes in musculoskeletal medicine, clinical quality registries, predictive modeling, clinical trials, population health, and health services research. A summary of my research output is available at [**orcid.org**](https://orcid.org/0000-0001-6592-0738). My summary profile from [**Publons**](https://www.webofscience.com/wos/author/record/H-5233-2019) also illustrates my contributions to peer-review with respected journals a number of fields. Selected citations to illustrate my experience in key science domains are summarised below, including preprint articles that have yet to be submitted for peer review.
+
+```{r}
+#| label: output
+#| output: asis
+tibble::tribble(
+    ~domain, ~summary, ~examplecite,
+    "Meta-Science", "Systematic Review; Meta-Analysis; Meta-Regression", c("Corey Scholes et al. 2015", "Harrison-Brown et al. 2019", "Scholes et al. 2023"),
+    "Open Science", "Trial Registration; Protocol Development", c("Ektas et al 2019", "Fatima et al 2020"),
+    "Computer-Assisted Surgery", "Shoulder; Hip; Knee",
+    c("Oussedik et al. 2012", "Nashikkar, Scholes, and Haber 2019", "Lustig et al. 2013", "Scholes, Schwagli, and Ireland 2023"),
+    "Clinical Quality Registry", "Implementation and validation in practice",
+    c("Jenio et al 2019", "Lee et al 2020", "Scholes et al 2023")
+) |>
+    cvoutput(domain = "domain", summary = "summary", examplecite = "examplecite")
+
+```
+
+# Volunteering
+
+Puppy raiser 2025-2026 for [**Guide Dogs Australia**](https://guidedogs.com.au/get-involved/become-a-volunteer/raise-a-puppy).
+
+
