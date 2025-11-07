@@ -58,7 +58,7 @@
 %----------------------------------------------------------------------------------------
 
 % some tex-live fonts - choose your own
-\usepackage[default]{$cvfont$}
+\usepackage[default]{raleway}
 
 % set font default
 \renewcommand*\familydefault{\sfdefault} 	
@@ -170,47 +170,7 @@
 %----------------------------------------------------------------------------------------
 %	Bibliography
 %---------------------------------------------------------------------------------------- 
-$if(csl-refs)$
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-$endif$
 
-$if(biblio-config)$
-$if(natbib)$
-\usepackage[$natbiboptions$]{natbib}
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
-$endif$
-$if(biblatex)$
-\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
-$for(bibliography)$
-\addbibresource{$bibliography$}
-$endfor$
-$endif$
-$endif$
-$if(nocite-ids)$
-\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
-$endif$
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
@@ -218,7 +178,7 @@ $endif$
 \usepackage{color}
 
 % primary color
-\definecolor{maincol}{HTML}{$cvcolor.main$}
+\definecolor{maincol}{HTML}{B83B5E}
 
 % accent color, secondary
 % \definecolor{accentcol}{RGB}{ 250, 150, 10 }
@@ -229,7 +189,7 @@ $endif$
 % light color
 \definecolor{lightcol}{RGB}{245,245,245}
 
-\definecolor{accentcol}{HTML}{$cvcolor.accent$}
+\definecolor{accentcol}{HTML}{6A2C70}
 
 
 
@@ -273,7 +233,7 @@ $endif$
 \newcommand{\cvtextsmall}[1] {
 	\begin{tabular*}{0.8\mpwidth}{p{0.8\mpwidth}}
 		\parbox{0.8\mpwidth}{#1}
-	\end{tabular*}
+	\end{tabular*}\\
 }
 %----------------------------------------------------------------------------------------
 %	CV SECTION
@@ -371,9 +331,9 @@ $endif$
 \newcommand{\cvoutput}[3] {
 	\parbox{\mpwidth}{
 		\begin{tabular*}{1\mpwidth}{p{0.66\mpwidth}  r}
-	 		\textcolor{black}{\textbf{#1}} & \\
+	 		\textcolor{black}{\textbf{#1}} \\
 			\textcolor{maincol}{#2} & \\
-		\end{tabular*}\\[4pt]
+		\end{tabular*}\\[8pt]
 	
 		\ifthenelse{\isempty{#3}}{}{
 			\cvtext{#3}\\
@@ -480,46 +440,98 @@ $endif$
 		%---------------------------------------------------------------------------------------
 		%	META IMAGE
 		%----------------------------------------------------------------------------------------
-        $if(sidebar.image)$
-        \includegraphics[width=\linewidth]{$sidebar.image$}
-        $endif$
-		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
-				\LARGE{\textbf{\textcolor{maincol}{$author$}}} \\[2pt]
-				\normalsize{ \textcolor{maincol} {$jobtitle$} }
+                \includegraphics[width=\linewidth]{portrait.jpg}
+        		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
+				\LARGE{\textbf{\textcolor{maincol}{David Schoch}}} \\[2pt]
+				\normalsize{ \textcolor{maincol} {Team Lead ``Transparent Social
+Analytics''} }
 			\end{minipage}}
 
 		%---------------------------------------------------------------------------------------
 		%	META SKILLS
 		%----------------------------------------------------------------------------------------
-		$for(sidebar.bullets)$
-		\icontext{caret-right}{12}{$it$}\\[6pt]
-		$endfor$
+				\icontext{caret-right}{12}{Konstanz, Germany}\\[6pt]
+				\icontext{caret-right}{12}{german}\\[6pt]
+				\icontext{caret-right}{12}{married}\\[6pt]
+		
+		
+		\cvsection{Skills}
 
-		$for(sidebar.sections)$
+						\cvskill{R}{10+ yrs.}{1} \\[10pt]
+								\cvskill{Python}{2 yrs.}{0.2} \\[10pt]
+								\cvskill{JavaScript}{4 yrs.}{0.4} \\[10pt]
+								\cvskill{Lua}{1 yr.}{0.1} \\[10pt]
+								\cvskill{Rmarkdown}{6 yrs.}{0.6} \\[10pt]
+								\cvskill{Quarto}{1 yr.}{0.1} \\[10pt]
+								\cvskill{Data Analysis}{9 years}{0.9} \\[10pt]
+								\cvskill{Web Scraping}{8 yrs.}{0.8} \\[10pt]
+								\cvskill{Web Development}{8 years}{0.8} \\[10pt]
+						
+		\cvsection{Tools}
 
-		\cvsection{$sidebar.sections.name$}
+						\icontext{caret-right}{12}{Git}\\[6pt]
+								\icontext{caret-right}{12}{RStudio}\\[6pt]
+								\icontext{caret-right}{12}{VS Code}\\[6pt]
+								\icontext{caret-right}{12}{Terminal}\\[6pt]
+						
+		\cvsection{Education}
 
-		$for(sidebar.sections.items)$
-		$if(sidebar.sections.items.exp)$
-		\cvskill{$sidebar.sections.items.text$}{$sidebar.sections.items.exp.text$}{$sidebar.sections.items.exp.num$} \\[10pt]
-		$elseif(sidebar.sections.items.inst)$
-		\cvmetaevent{$sidebar.sections.items.time$}{$sidebar.sections.items.text$}{$sidebar.sections.items.inst$}{$sidebar.sections.items.details$}
-		$elseif(sidebar.sections.items.href)$
-		\iconhref{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}{$sidebar.sections.items.href$}\\[6pt]
-		$elseif(sidebar.sections.items.icon)$
-		\icontext{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}\\[6pt]
-		$else$
-		\icontext{caret-right}{12}{$it$}\\[6pt]
-		$endif$
-		$endfor$
-		$endfor$
+						\cvmetaevent{09/2012 - 11/2015}{Ph.D.~Computer Science}{University of
+Konstanz}{Thesis: Positional Approach for Network Centrality}
+								\cvmetaevent{10/2006 - 07/2012}{Businessmathematics (Dipl.)}{Karlsruhe
+Institute of Technology}{Thesis: Modularity Maximization}
+						
+		\cvsection{Contact}
 
+						\icontext{map-marker}{16}{Konstanz, Germany}\\[6pt]
+								\icontext{phone}{16}{+XX XXXX XXXX}\\[6pt]
+								\icontext{envelope}{16}{david@schochastics.net}\\[6pt]
+								\iconhref{home}{16}{mr.schochastics.net}{https://mr.schochastics.net}\\[6pt]
+								\iconhref{github}{16}{schochastics}{https://github.com/schochastics}\\[6pt]
+								\iconhref{twitter}{16}{schochastics}{https://twitter.com/schochastics}\\[6pt]
+						
 	\end{leftcolumn}
 
 	\begin{rightcolumn}
-		$body$
-		$biblio.tex()$
-	\end{rightcolumn}
+		\cvsection{Summary} \vspace{4pt}
+
+\cvtext{%
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+ipsum dolor sit amet.}
+
+\cvsection{Experience} \vspace{4pt}
+
+\cvevent{03/2022 - Present}{Team Lead for Transparent Social Analytics}{Department of Computational Social Science \newline GESIS - Leibniz Institute for the Social Sciences}{I am coordinating a project to build an Open Science platform with reusable code and tutorials to analyze digital behaviour data. I am also doing research on Open Science practices and I implement tools to enhance reproducibility and make methods accessible in R}
+
+\cvevent{09/2018 - 02/2022}{Presidential Fellow}{Sociology Department \newline University of Manchester}{I did research on Disinformation on Social Media which involved the analysis of large scale and unstructured data sets with R and Bash}
+
+\cvevent{11/2017 - 08/2018}{Post Doctoral Researcher}{Chair of Social Networks \newline ETH Zurich}{I developed new methods to analyze social networks and I gathered and analyzed large datsets from Social Media APIs}
+
+\cvevent{10/2015 - 10/2017}{Post Doctoral Researcher}{Department of Computer \& Information Science \newline University of Konstanz}{I developed new methods to analyze social networks and scraped, harmonized, and analyzed a large corpus of football data}
+
+\cvevent{11/2012 - 09/2015}{Ph.D. Candidate}{Department of Computer \& Information Science \newline University of Konstanz}{I developed new methods to analyze social networks and implemented these methods in R packages using R and C++}
+
+\cvsection{Projects} \vspace{4pt}
+
+\cvtext{%
+See my \href{https://github.com/schochastics}{github profile} for a
+comprehensive list of open source projects.}
+
+\cvproj{R packages}{Creator and Maintainer}{edgebundle, graphlayouts, levelnet, netrankr, netUtils, networkdata, PSAWR, roughnet, roughsf, rtoot, Rtumblr, signnet, snahelper, webbotparseR, webtrackR}
+
+\cvproj{R packages}{Contributor}{backbone, ggraph, multigraphr, netropy, rang, rgraph6}
+
+\cvproj{Quarto extensions}{Creator and Maintainer}{Academicons (shortcodes), Blackboard (revealjs theme), sketchy (html theme), share buttons (filter), nutshell (filter), quartocities (website template), quartocv (cv templates)}
+
+\cvproj{soccerverse.com (football analytics website)}{Creator and Maintainer}{Manual and automated gathering of football results around the world, Harmonizing data (e.g. club names and managers), Implementation of ranking algorithms, Predicting of league tables and matchforecasting, Uses R, JavaScript, HTML, and CSS, around 1000 visitors/month}
+			\end{rightcolumn}
 \end{paracol}
 
 

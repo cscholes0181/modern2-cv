@@ -9,7 +9,6 @@ cvcolor:
   accent: 6A2C70
 jobtitle: Chief Science Officer, EBM Analytics
 sidebar:
-  image: portrait.jpg
   bullets:
     - Sydney, Australia
     - Australian Citizen
@@ -78,6 +77,14 @@ sidebar:
           text: coreyscholes
 execute: 
   echo: false
+include-in-header:
+  text: |
+    \usepackage{hyperref}
+    \hypersetup{
+      colorlinks=true,
+      linkcolor=blue,
+      urlcolor=blue
+    }
 ---
 
 ```{r}
@@ -97,13 +104,13 @@ cvevents <- function(tbl, when, what, where, descr) {
 }
 
 cvoutput <- function(tbl,domain, summary, examplecite){   #what,role,items
-    command_start <- "\\cvoutput"
+      command_start <- "\\cvoutput"
     res <- paste0(
         command_start, "{", tbl[[domain]], "}",
         "{", tbl[[summary]], "}",
-        "{", sapply(tbl[[examplecite]], function(x)paste0(x,collapse = "; ")), "}"
+        "{", sapply(tbl[[examplecite]], function(x) paste0(x, collapse = "; ")), "}"
     )
-
+    
     cat(res, sep = "\n\n\n")
 }
 ```
@@ -131,6 +138,26 @@ tibble::tribble(
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
+# CREDENTIALS 
+
+-   Statistical methods for risk prediction and prognostic models - University of Keele UK (2021)
+
+-   NSW Going Global program for health technology companies to enter international markets (2022)
+
+-   ANDHealth Accelerate program for startups in health technology (2023) •
+
+-   Good Clinical Practice (2024) • Working With Children Check (2024)
+
+# Memberships
+
+-   Statistical Society of Australia
+
+-   International Society for Arthroscopy and Knee Orthopaedic Surgery
+
+-   Australian Institute of Company Directors
+
+-   Australia and New Zealand Orthopaedic Research Society (Past)
+
 # Scientific Output
 
 80+ peer-reviewed publications spanning meta-science, surgical and allied health outcomes in musculoskeletal medicine, clinical quality registries, predictive modeling, clinical trials, population health, and health services research. A summary of my research output is available at [**orcid.org**](https://orcid.org/0000-0001-6592-0738). My summary profile from [**Publons**](https://www.webofscience.com/wos/author/record/H-5233-2019) also illustrates my contributions to peer-review with respected journals a number of fields. Selected citations to illustrate my experience in key science domains are summarised below, including preprint articles that have yet to be submitted for peer review.
@@ -138,21 +165,31 @@ tibble::tribble(
 ```{r}
 #| label: output
 #| output: asis
-tibble::tribble(
+#| results: asis
+tbl <- tibble::tribble(
     ~domain, ~summary, ~examplecite,
     "Meta-Science", "Systematic Review; Meta-Analysis; Meta-Regression", c("Corey Scholes et al. 2015", "Harrison-Brown et al. 2019", "Scholes et al. 2023"),
     "Open Science", "Trial Registration; Protocol Development", c("Ektas et al 2019", "Fatima et al 2020"),
     "Computer-Assisted Surgery", "Shoulder; Hip; Knee",
     c("Oussedik et al. 2012", "Nashikkar, Scholes, and Haber 2019", "Lustig et al. 2013", "Scholes, Schwagli, and Ireland 2023"),
     "Clinical Quality Registry", "Implementation and validation in practice",
-    c("Jenio et al 2019", "Lee et al 2020", "Scholes et al 2023")
-) |>
-    cvoutput(domain = "domain", summary = "summary", examplecite = "examplecite")
+    c("Jenio et al 2019", "Lee et al 2020", "Scholes et al 2023"),
+    "Health Services", "Practice quality audit and improvement",
+    c("Tucker et al 2020", "Barton et al 2024")
+) |> cvoutput(domain = "domain", summary = "summary", examplecite = "examplecite")
+    # c("\\href{http://dx.doi.org/10.1007/s00167-013-2482-3}{Scholes et al. 2015}", "\\href{http://dx.doi.org/10.1186/s13018-019-1070-8){Harrison-Brown et al. 2019}", "\\href{http://dx.doi.org/10.1007/s00167-022-07299-3}{Scholes et al. 2023}"),
+    # "Open Science", "Trial Registration; Protocol Development", 
+    # c("\\href{http://dx.doi.org/10.1186/s13018-019-1127-8}{Ektas et al 2019}", "\\href{http://dx.doi.org/10.1186/s13063-022-06591-4}{Fatima et al 2020}"),
+    # "Computer-Assisted Surgery", "Shoulder; Hip; Knee",
+    # c("\\href{http://dx.doi.org/10.1007/s11999-012-2515-0}{Oussedik et al. 2012}", "\\href{http://dx.doi.org/10.1016/j.jse.2019.03.013}{Nashikkar, Scholes, and Haber 2019}", "\\href{http://dx.doi.org/10.1016/j.arth.2013.05.020{)}{Lustig et al. 2013}",  "\\href{http://dx.doi.org/10.1186/s42836-023-00217-z}{Scholes, Schwagli, and Ireland 2023}"),
+    # "Clinical Quality Registry", "Implementation and validation in practice",
+    # c("\\href{http://dx.doi.org/10.21037/atm.2019.02.38}{Jenio et al 2019}", "\\href{http://dx.doi.org/10.1186/s12913-020-05203-8}{Lee et al 2020}", "\\href{http://dx.doi.org/10.1093/jsprm/snad014}{Scholes et al 2023b}"),    
+    # "Health Services", "Practice quality audit and improvement",
+    # c("\\href{http://dx.doi.org/10.1186/s40945-020-00093-9}{Tucker et al 2020}","\\href{http://dx.doi.org/10.1111/ajag.13247}{Barton et al 2024}")
+
 
 ```
 
 # Volunteering
 
 Puppy raiser 2025-2026 for [**Guide Dogs Australia**](https://guidedogs.com.au/get-involved/become-a-volunteer/raise-a-puppy).
-
-

@@ -58,7 +58,7 @@
 %----------------------------------------------------------------------------------------
 
 % some tex-live fonts - choose your own
-\usepackage[default]{$cvfont$}
+\usepackage[default]{raleway}
 
 % set font default
 \renewcommand*\familydefault{\sfdefault} 	
@@ -170,47 +170,7 @@
 %----------------------------------------------------------------------------------------
 %	Bibliography
 %---------------------------------------------------------------------------------------- 
-$if(csl-refs)$
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-$endif$
 
-$if(biblio-config)$
-$if(natbib)$
-\usepackage[$natbiboptions$]{natbib}
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
-$endif$
-$if(biblatex)$
-\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
-$for(bibliography)$
-\addbibresource{$bibliography$}
-$endfor$
-$endif$
-$endif$
-$if(nocite-ids)$
-\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
-$endif$
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
@@ -218,7 +178,7 @@ $endif$
 \usepackage{color}
 
 % primary color
-\definecolor{maincol}{HTML}{$cvcolor.main$}
+\definecolor{maincol}{HTML}{B83B5E}
 
 % accent color, secondary
 % \definecolor{accentcol}{RGB}{ 250, 150, 10 }
@@ -229,7 +189,7 @@ $endif$
 % light color
 \definecolor{lightcol}{RGB}{245,245,245}
 
-\definecolor{accentcol}{HTML}{$cvcolor.accent$}
+\definecolor{accentcol}{HTML}{6A2C70}
 
 
 
@@ -480,46 +440,152 @@ $endif$
 		%---------------------------------------------------------------------------------------
 		%	META IMAGE
 		%----------------------------------------------------------------------------------------
-        $if(sidebar.image)$
-        \includegraphics[width=\linewidth]{$sidebar.image$}
-        $endif$
-		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
-				\LARGE{\textbf{\textcolor{maincol}{$author$}}} \\[2pt]
-				\normalsize{ \textcolor{maincol} {$jobtitle$} }
+        		\fcolorbox{white}{white}{\begin{minipage}[c][1.5cm][c]{1\mpwidth}
+				\LARGE{\textbf{\textcolor{maincol}{Corey Scholes}}} \\[2pt]
+				\normalsize{ \textcolor{maincol} {Chief Science Officer, EBM
+Analytics} }
 			\end{minipage}}
 
 		%---------------------------------------------------------------------------------------
 		%	META SKILLS
 		%----------------------------------------------------------------------------------------
-		$for(sidebar.bullets)$
-		\icontext{caret-right}{12}{$it$}\\[6pt]
-		$endfor$
+				\icontext{caret-right}{12}{Sydney, Australia}\\[6pt]
+				\icontext{caret-right}{12}{Australian Citizen}\\[6pt]
+				\icontext{caret-right}{12}{Married}\\[6pt]
+		
+		
+		\cvsection{Skills}
 
-		$for(sidebar.sections)$
+						\cvskill{R}{3+ yrs.}{0.7} \\[10pt]
+								\cvskill{Stata}{2 yrs.}{0.4} \\[10pt]
+								\cvskill{Google Cloud}{7 yrs.}{0.4} \\[10pt]
+								\cvskill{Github}{5 yr.}{0.2} \\[10pt]
+								\cvskill{Quarto}{3 yr.}{0.25} \\[10pt]
+								\cvskill{Causal inference}{3 years}{0.2} \\[10pt]
+								\cvskill{Statistical Analysis}{15 yrs.}{0.6} \\[10pt]
+								\cvskill{Clinical Research}{15 years}{0.9} \\[10pt]
+						
+		\cvsection{Tools}
 
-		\cvsection{$sidebar.sections.name$}
+						\icontext{caret-right}{12}{Shiny}\\[6pt]
+								\icontext{caret-right}{12}{Google Workspace}\\[6pt]
+								\icontext{caret-right}{12}{Matlab}\\[6pt]
+								\icontext{caret-right}{12}{Project management}\\[6pt]
+								\icontext{caret-right}{12}{Customer Relationship Management}\\[6pt]
+						
+		\cvsection{Education}
 
-		$for(sidebar.sections.items)$
-		$if(sidebar.sections.items.exp)$
-		\cvskill{$sidebar.sections.items.text$}{$sidebar.sections.items.exp.text$}{$sidebar.sections.items.exp.num$} \\[10pt]
-		$elseif(sidebar.sections.items.inst)$
-		\cvmetaevent{$sidebar.sections.items.time$}{$sidebar.sections.items.text$}{$sidebar.sections.items.inst$}{$sidebar.sections.items.details$}
-		$elseif(sidebar.sections.items.href)$
-		\iconhref{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}{$sidebar.sections.items.href$}\\[6pt]
-		$elseif(sidebar.sections.items.icon)$
-		\icontext{$sidebar.sections.items.icon$}{16}{$sidebar.sections.items.text$}\\[6pt]
-		$else$
-		\icontext{caret-right}{12}{$it$}\\[6pt]
-		$endif$
-		$endfor$
-		$endfor$
+						\cvmetaevent{2010}{Ph.D.~Exercise Science}{Queensland University of
+Technology}{Thesis: The effects of muscle fatigue on knee function
+during landing}
+								\cvmetaevent{2004}{Bachelor Applied Science (Hons)}{Queensland
+University of Technology}{}
+						
+		\cvsection{Contact}
 
+						\icontext{map-marker}{16}{Sydney, Australia}\\[6pt]
+								\icontext{phone}{16}{+61 411 032 987}\\[6pt]
+								\icontext{envelope}{16}{cscholes181@gmail.com}\\[6pt]
+								\icontext{linkedin}{16}{coreyscholes}\\[6pt]
+						
 	\end{leftcolumn}
 
 	\begin{rightcolumn}
-		$body$
-		$biblio.tex()$
-	\end{rightcolumn}
+		\cvsection{Summary} \vspace{4pt}
+
+\cvtext{%
+\textbf{Scientist and Analysis Executive} with 15 years of experience
+bridging the gap between clinical research and evidence-generation
+within routine practice across diverse settings. A collaborative leader
+with the ability to communicate technically across multidisciplinary
+teams and influence behaviour change to embed data-driven practices into
+long-term strategies. An experienced consultant assisting executive
+teams to bring about change within their own organisations through
+strategic planning and implementation of complex systems.}
+
+\cvsection{Experience} \vspace{4pt}
+
+\cvevent{2020 - Present}{Chief Science Officer}{EBM Analytics}{I was the architect of 8+ specialist clinical quality registries for sports medicine, adult joint reconstruction and ortho-oncology, managing multiyear engagements (5 years) valued at 60 - 250k each. I led teams to implement data infrastructure to integrate electronic screening, randomisation and longitudinal patient-reported outcome collection within clinical workflows. I was responsible for ensuring systems complied with recognised principles for clinical quality registries, as well as human research ethics requirements}
+
+\cvevent{2016 - Present}{Co-Founder and Director}{EBM Analytics}{I built a profitable healthcare analytics firm with two co-founders from the ground up, scaling to 750k annual revenue with 10 FTE staff. I established a national and international client base across public and private health sectors, government and industry.}
+
+\cvevent{2016 - Present}{Principal Consultant}{EBM Analytics}{I was the point person for business development with targeted account acquisition and relationship management within complex customer ecosystems and long purchasing cycles. I secured numerous consulting engagements resulting in peer-reviewed publications and internal organisation reports for customers. Through this work I supervised multidisciplinary teams of engineers, data analysts, clinicians, and research coordinators across concurrent projects}
+
+\cvevent{2009- 2016}{Director of Research}{Sydney Orthopaedic Research Institute}{I planned, led and managed the research and operational activities of a non-for-profit institute attached to the practices of a group of orthopaedic surgeons. I provided operational and day-to-day management for the Institute, developed research strategy and provided the subject matter expertise for clinical research. I also acted as at the primary point of contact for staffing, contracting and supplier engagements}
+
+\cvevent{2006-2008}{Teaching Assistant}{Queensland University of Technology}{Planned, prepared and delivered lectures and tutorials on fundamental and advanced biomechanics and functional anatomy. I conducted curriculum planning and preparation for fundamental and advanced classes. }
+
+\cvevent{2008 - 2015}{General Service Officer}{Australian Army Reserve}{In this role I was responsible for the training, administration and leadership of up to 50 personnel routinely and assisted with operations supporting training activities for 600+ personnel for scheduled exercises.}
+
+\cvsection{CREDENTIALS} \vspace{4pt}
+
+\begin{itemize}
+\item
+  \cvtext{%
+  Statistical methods for risk prediction and prognostic models -
+  University of Keele UK (2021)}
+\item
+  \cvtext{%
+  NSW Going Global program for health technology companies to enter
+  international markets (2022)}
+\item
+  \cvtext{%
+  ANDHealth Accelerate program for startups in health technology (2023)
+  •}
+\item
+  \cvtext{%
+  Good Clinical Practice (2024) • Working With Children Check (2024)}
+\end{itemize}
+
+\cvsection{Memberships} \vspace{4pt}
+
+\begin{itemize}
+\item
+  \cvtext{%
+  Statistical Society of Australia}
+\item
+  \cvtext{%
+  International Society for Arthroscopy and Knee Orthopaedic Surgery}
+\item
+  \cvtext{%
+  Australian Institute of Company Directors}
+\item
+  \cvtext{%
+  Australia and New Zealand Orthopaedic Research Society (Past)}
+\end{itemize}
+
+\cvsection{Scientific Output} \vspace{4pt}
+
+\cvtext{%
+80+ peer-reviewed publications spanning meta-science, surgical and
+allied health outcomes in musculoskeletal medicine, clinical quality
+registries, predictive modeling, clinical trials, population health, and
+health services research. A summary of my research output is available
+at \href{https://orcid.org/0000-0001-6592-0738}{\textbf{orcid.org}}. My
+summary profile from
+\href{https://www.webofscience.com/wos/author/record/H-5233-2019}{\textbf{Publons}}
+also illustrates my contributions to peer-review with respected journals
+a number of fields. Selected citations to illustrate my experience in
+key science domains are summarised below, including preprint articles
+that have yet to be submitted for peer review.}
+
+\cvoutput{Meta-Science}{Systematic Review; Meta-Analysis; Meta-Regression}{Corey Scholes et al. 2015; Harrison-Brown et al. 2019; Scholes et al. 2023}
+
+\cvoutput{Open Science}{Trial Registration; Protocol Development}{Ektas et al 2019; Fatima et al 2020}
+
+\cvoutput{Computer-Assisted Surgery}{Shoulder; Hip; Knee}{Oussedik et al. 2012; Nashikkar, Scholes, and Haber 2019; Lustig et al. 2013; Scholes, Schwagli, and Ireland 2023}
+
+\cvoutput{Clinical Quality Registry}{Implementation and validation in practice}{Jenio et al 2019; Lee et al 2020; Scholes et al 2023}
+
+\cvoutput{Health Services}{Practice quality audit and improvement}{Tucker et al 2020; Barton et al 2024}
+
+\cvsection{Volunteering} \vspace{4pt}
+
+\cvtext{%
+Puppy raiser 2025-2026 for
+\href{https://guidedogs.com.au/get-involved/become-a-volunteer/raise-a-puppy}{\textbf{Guide
+Dogs Australia}}.}
+			\end{rightcolumn}
 \end{paracol}
 
 
