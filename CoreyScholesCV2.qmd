@@ -138,7 +138,7 @@ tibble::tribble(
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
-# CREDENTIALS 
+# CREDENTIALS
 
 -   Statistical methods for risk prediction and prognostic models - University of Keele UK (2021)
 
