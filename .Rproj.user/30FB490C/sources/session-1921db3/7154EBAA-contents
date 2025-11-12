@@ -454,24 +454,36 @@ Analytics} }
 				\icontext{caret-right}{12}{Married}\\[6pt]
 		
 		
+		\cvsection{Contact}
+
+						\icontext{map-marker}{16}{Sydney, Australia}\\[6pt]
+								\icontext{phone}{16}{+61 411 032 987}\\[6pt]
+								\icontext{envelope}{16}{cscholes181@gmail.com}\\[6pt]
+								\icontext{linkedin}{16}{coreyscholes}\\[6pt]
+						
 		\cvsection{Skills}
 
-						\cvskill{R}{3+ yrs.}{0.7} \\[10pt]
-								\cvskill{Stata}{2 yrs.}{0.4} \\[10pt]
-								\cvskill{Google Cloud}{7 yrs.}{0.4} \\[10pt]
-								\cvskill{Github}{5 yr.}{0.2} \\[10pt]
-								\cvskill{Quarto}{3 yr.}{0.25} \\[10pt]
-								\cvskill{Causal inference}{3 years}{0.2} \\[10pt]
-								\cvskill{Statistical Analysis}{15 yrs.}{0.6} \\[10pt]
-								\cvskill{Clinical Research}{15 years}{0.9} \\[10pt]
+						\cvskill{Research and Scientific Writing}{15+ yrs.}{1} \\[10pt]
+								\cvskill{Leadership}{10+ yrs.}{0.9} \\[10pt]
+								\cvskill{Budgeting and Financial management}{9 yrs.}{0.9} \\[10pt]
+								\cvskill{Corporate Governance}{6 yr.}{0.6} \\[10pt]
+								\cvskill{Statistical Analysis and Design}{15+ yr.}{1} \\[10pt]
+								\cvskill{Grant Writing}{4 years}{0.4} \\[10pt]
+								\cvskill{Software and Application Development}{2 yrs.}{0.2} \\[10pt]
 						
 		\cvsection{Tools}
 
-						\icontext{caret-right}{12}{Shiny}\\[6pt]
+						\icontext{caret-right}{12}{Ethics Management Systems}\\[6pt]
+								\icontext{caret-right}{12}{Project Management Systems (ClickUp)}\\[6pt]
+								\icontext{caret-right}{12}{Accounting Software (Xero, MYOB)}\\[6pt]
 								\icontext{caret-right}{12}{Google Workspace}\\[6pt]
-								\icontext{caret-right}{12}{Matlab}\\[6pt]
-								\icontext{caret-right}{12}{Project management}\\[6pt]
-								\icontext{caret-right}{12}{Customer Relationship Management}\\[6pt]
+								\icontext{caret-right}{12}{Google Cloud; SQL; API}\\[6pt]
+								\icontext{caret-right}{12}{R; Quarto; Tidyverse}\\[6pt]
+								\icontext{caret-right}{12}{Stata; Matlab}\\[6pt]
+								\icontext{caret-right}{12}{Microsoft Office}\\[6pt]
+								\icontext{caret-right}{12}{Survey Design (QuestionPro,
+SurveyMonkey)}\\[6pt]
+								\icontext{caret-right}{12}{Version Control (Github)}\\[6pt]
 						
 		\cvsection{Education}
 
@@ -480,13 +492,6 @@ Technology}{Thesis: The effects of muscle fatigue on knee function
 during landing}
 								\cvmetaevent{2004}{Bachelor Applied Science (Hons)}{Queensland
 University of Technology}{}
-						
-		\cvsection{Contact}
-
-						\icontext{map-marker}{16}{Sydney, Australia}\\[6pt]
-								\icontext{phone}{16}{+61 411 032 987}\\[6pt]
-								\icontext{envelope}{16}{cscholes181@gmail.com}\\[6pt]
-								\icontext{linkedin}{16}{coreyscholes}\\[6pt]
 						
 	\end{leftcolumn}
 
@@ -505,13 +510,13 @@ strategic planning and implementation of complex systems.}
 
 \cvsection{Experience} \vspace{4pt}
 
-\cvevent{2020 - Present}{Chief Science Officer}{EBM Analytics}{I was the architect of 8+ specialist clinical quality registries for sports medicine, adult joint reconstruction and ortho-oncology, managing multiyear engagements (5 years) valued at 60 - 250k each. I led teams to implement data infrastructure to integrate electronic screening, randomisation and longitudinal patient-reported outcome collection within clinical workflows. I was responsible for ensuring systems complied with recognised principles for clinical quality registries, as well as human research ethics requirements}
+\cvevent{2020 - Present}{Chief Science Officer}{EBM Analytics}{EBM Analytics is a medical research and data consultancy supporting research, quality improvement and auditing efforts in musculoskeletal medicine and orthopaedics. I was the architect of 8+ specialist clinical quality registries for sports medicine, adult joint reconstruction and ortho-oncology, managing multiyear engagements (5 years) valued at 60 - 250k each. I led teams to implement data infrastructure to conduct electronic screening, clinical data retrieval and longitudinal patient-reported outcome collection within clinical practices. I was responsible for ensuring systems complied with recognised principles for clinical quality registries, as well as human research ethics requirements}
 
 \cvevent{2016 - Present}{Co-Founder and Director}{EBM Analytics}{I built a profitable healthcare analytics firm with two co-founders from the ground up, scaling to 750k annual revenue with 10 FTE staff. I established a national and international client base across public and private health sectors, government and industry.}
 
 \cvevent{2016 - Present}{Principal Consultant}{EBM Analytics}{I was the point person for business development with targeted account acquisition and relationship management within complex customer ecosystems and long purchasing cycles. I secured numerous consulting engagements resulting in peer-reviewed publications and internal organisation reports for customers. Through this work I supervised multidisciplinary teams of engineers, data analysts, clinicians, and research coordinators across concurrent projects}
 
-\cvevent{2009- 2016}{Director of Research}{Sydney Orthopaedic Research Institute}{I planned, led and managed the research and operational activities of a non-for-profit institute attached to the practices of a group of orthopaedic surgeons. I provided operational and day-to-day management for the Institute, developed research strategy and provided the subject matter expertise for clinical research. I also acted as at the primary point of contact for staffing, contracting and supplier engagements}
+\cvevent{2009- 2016}{Director of Research}{Sydney Orthopaedic Research Institute}{I planned, led and managed the research and operational activities of a non-for-profit institute attached to the practices of a group of orthopaedic surgeons. I provided operational and day-to-day management for the Institute, developed research strategy and provided the subject matter expertise for clinical research, leading to scientific presentations and publications. I also acted as at the primary point of contact for staffing, contracting and supplier engagements. I also implemented financial plans and operational budgets from a total annual budget of \~\$750 000}
 
 \cvevent{2006-2008}{Teaching Assistant}{Queensland University of Technology}{Planned, prepared and delivered lectures and tutorials on fundamental and advanced biomechanics and functional anatomy. I conducted curriculum planning and preparation for fundamental and advanced classes. }
 
